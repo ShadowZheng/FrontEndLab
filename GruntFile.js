@@ -12,11 +12,10 @@ module.exports = function(grunt) {
         options: {
           open: true, //自动打开网页 http://
           base: [
-            './app'  //主目录
+            './home'  //主目录
             ]
           }
         }
-      
     },
     watch: {
       sass: {
