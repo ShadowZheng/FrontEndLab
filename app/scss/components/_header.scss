@@ -1,0 +1,17 @@
+.top-bar {
+	background-color: $green;
+	border: none;
+	margin-bottom: 0;
+	li {
+		a {
+			font-weight: bold;
+			color: $white;
+			&:hover {
+				background-color: darken($green, 10%);
+			}
+		}
+		&.active a {
+			background-color: darken($green, 10%);
+		}
+	}
+}

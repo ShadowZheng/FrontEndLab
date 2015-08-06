@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         options: {
           open: true, //自动打开网页 http://
           base: [
-            './home'  //主目录
+            'app'  //主目录
             ]
           }
         }

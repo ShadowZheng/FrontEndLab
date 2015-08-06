@@ -1,0 +1,23 @@
+<aside class="sideBar">
+	<div class="sideBar-left">
+		<a ui-sref="angular.navigation" ui-sref-active="active">
+			<i class="glyphicon glyphicon-list icon-item"></i>
+			<span class="menu-title">导航</span>
+		</a>
+		<a ui-sref="form">
+			<i class="glyphicon glyphicon-check icon-item"></i>
+			<span class="menu-title">表单</span>
+		</a>
+	</div>			
+	<div class="sideBar-right">
+		<div class="searchBox">
+			<i class="glyphicon glyphicon-search icon-search"></i>
+			<input id="search-input" type="text" placeholder="Search">
+		</div>
+		<nav ui-view>
+		</nav>
+	</div>
+</aside>
+<main class="content">
+	<div ui-view="item"></div>
+</main>
