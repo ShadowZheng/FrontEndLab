@@ -13,7 +13,7 @@ angular.module('app')
 	  .state('angular.navigation', {
 	  	url: '/navigation',
 	  	templateUrl: '../tpl/angular.navigation.html',
-	  	controller: 'NgNavigationCtrl'
+	  	controller: 'NavigationCtrl'
 	  })
 	  .state('angular.navigation.item', {
 	  	url: '/item',

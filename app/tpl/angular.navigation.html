@@ -1,5 +1,9 @@
-<div>
-	<a class="item-link" ng-repeat="item in items">
+<div class="searchBox">
+	<i class="glyphicon glyphicon-search icon-search"></i>
+	<input id="search-input" type="text" placeholder="Search" ng-model="searchTxt">
+</div>
+<div>	
+	<a class="item-link" ng-repeat="item in items | filter:searchTxt">
 		{{item.name}}
 	</a>
 </div>

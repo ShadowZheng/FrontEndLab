@@ -7,4 +7,6 @@ angular.module('FELab-ng', []);
 
 angular.module('FELab-react', []);
 
-angular.module('FELab-css3',[]);
+angular.module('FELab-css3', []);
+
+angular.module('FELabFilters', []);

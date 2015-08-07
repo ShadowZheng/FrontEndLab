@@ -1,15 +1,24 @@
 'use strict';
 
-angular.module('FELab-ng').controller('AngularCtrl', ['$scope', function ($scope) {
-	$scope.alert = function () {
-		alert("图片");
-	};
+angular.module('FELab-ng')
+
+.controller('AngularCtrl', ['$scope', function ($scope) {
+	$scope.slected = 1;
+
+	$scope.hello = function() {
+		alert(1);
+	}
 }])
 
-.controller('NgNavigationCtrl', ['$scope', function ($scope) {
+.controller('NavigationCtrl', ['$scope', '$element', function ($scope, $element) {
 	$scope.items = [
 		{name: '导航1'},
 		{name: '导航2'},
-		{name: '导航2'}
+		{name: '导航3'}
 	];
+
+
+	$element.find('.item-link').click(function() {
+		alert($(this).val());
+	});
 }]);

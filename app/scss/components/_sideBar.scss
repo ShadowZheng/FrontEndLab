@@ -18,15 +18,26 @@
 			height: auto;
 			display: inline-block;
 			padding: 10px 0;
-			&.active, &:hover {
+			&.active {
+				color: $green;
+				.triangle-left {
+					display: block !important;
+				}
+			}
+			&:hover {
 				color: $green;
 			}
 			.icon-item {
+				position: relative;
 				width: 100%;
 				font-size: 28px;
 				margin: 10px 0;
-				&::after {
-					// @include css3-triangle(left, $mGray, 5px);
+				.triangle-left {
+					display: none;
+					position: absolute;
+					top: calc(50% - 10px);
+					right: 0;
+					@include triangle(20px, $mGray, left);
 				}
 			}
 			.menu-title {
@@ -60,9 +71,11 @@
 			}
 		}
 		nav {
-			padding-top: 15px;
 			.item-link {
-				margin: 5px 0;
+				&:first-child {
+					margin-top: 30px;
+				}
+				margin: 10px 0;
 				padding: 0 15px 0 32px;
 				font-size: 16px;
 				line-height: 22px;
