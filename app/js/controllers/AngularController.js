@@ -3,22 +3,20 @@
 angular.module('FELab-ng')
 
 .controller('AngularCtrl', ['$scope', function ($scope) {
-	$scope.slected = 1;
 
-	$scope.hello = function() {
-		alert(1);
+	$scope.items = [
+		{name: 'SlideOut隐藏滑动侧边栏导航', itemId: 'nav1', url: 'tpl/nav/nav1/index.html'},
+		{name: '导航2', itemId: 'nav2'},
+		{name: '导航3', itemId: 'nav3'}
+	];
+
+	$scope.currentDemo = $scope.items[0];
+
+	$scope.changeDemo = function(item) {
+		$scope.currentDemo = item;
 	}
 }])
 
-.controller('NavigationCtrl', ['$scope', '$element', function ($scope, $element) {
-	$scope.items = [
-		{name: '导航1'},
-		{name: '导航2'},
-		{name: '导航3'}
-	];
-
-
-	$element.find('.item-link').click(function() {
-		alert($(this).val());
-	});
-}]);
+.controller('NavigationCtrl', ['$scope', function ($scope) {
+}])
+;

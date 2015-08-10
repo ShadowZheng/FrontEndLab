@@ -66,7 +66,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 1, ../scss/common/_global.scss */
 body {
   font-size: 14px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
   color: #ffffff;
   background-color: #F4F6F8;
 }
@@ -87,23 +87,30 @@ a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
+/* line 20, ../scss/common/_global.scss */
+.main main iframe {
+  width: calc(100% - 460px);
+  height: calc(100% - 50px);
+  position: absolute;
+}
 
 /* line 1, ../scss/components/_header.scss */
 .top-bar {
+  font-weight: bold;
   background-color: #33CC99;
   border: none;
   margin-bottom: 0;
 }
-/* line 6, ../scss/components/_header.scss */
+/* line 7, ../scss/components/_header.scss */
 .top-bar li a {
   font-weight: bold;
   color: #ffffff;
 }
-/* line 9, ../scss/components/_header.scss */
+/* line 10, ../scss/components/_header.scss */
 .top-bar li a:hover {
   background-color: #29a37a;
 }
-/* line 13, ../scss/components/_header.scss */
+/* line 14, ../scss/components/_header.scss */
 .top-bar li.active a {
   background-color: #29a37a;
 }
@@ -200,8 +207,8 @@ a:hover {
   border: none;
   outline: none;
 }
-/* line 74, ../scss/components/_sideBar.scss */
-.sideBar .sideBar-right nav .item-link {
+/* line 73, ../scss/components/_sideBar.scss */
+.sideBar .sideBar-right .item-link {
   margin: 10px 0;
   padding: 0 15px 0 32px;
   font-size: 16px;
@@ -209,10 +216,22 @@ a:hover {
   white-space: nowrap;
   display: block;
   color: #474747;
+  font-weight: bold;
 }
-/* line 75, ../scss/components/_sideBar.scss */
-.sideBar .sideBar-right nav .item-link:first-child {
+/* line 83, ../scss/components/_sideBar.scss */
+.sideBar .sideBar-right .item-link:first-child {
   margin-top: 30px;
+}
+/* line 86, ../scss/components/_sideBar.scss */
+.sideBar .sideBar-right .item-link:hover, .sideBar .sideBar-right .item-link.active {
+  color: #009966;
+  font-weight: bold;
+}
+/* line 90, ../scss/components/_sideBar.scss */
+.sideBar .sideBar-right .item-link .item-link-icon {
+  color: #009966;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 /* line 1, ../scss/pages/_angular.scss */

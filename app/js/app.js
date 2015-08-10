@@ -10,15 +10,22 @@ angular.module('app')
 	  	templateUrl: '../tpl/angular.html',
 	  	controller: 'AngularCtrl'
 	  })
-	  .state('angular.navigation', {
-	  	url: '/navigation',
-	  	templateUrl: '../tpl/angular.navigation.html',
+	  .state('angular.nav', {
+	  	url: '/nav',
+	  	templateUrl: '../tpl/angular.nav.html',
 	  	controller: 'NavigationCtrl'
 	  })
-	  .state('angular.navigation.item', {
-	  	url: '/item',
-	  	templateUrl: '..tpl/angular.navigation.item.html'
-	  })
+	  // .state('angular.nav.item', {
+	  // 	url: '/:itemId',
+	  // 	views : {
+	  // 		'item@angular' : {
+			//   	templateUrl: function($stateParams) {
+			//   		return '../tpl/angular.nav.' + $stateParams.itemId + '.html';
+			//   	},
+			//   	controller: 'NavigationCtrl'
+	  // 		}
+	  // 	}
+	  // })
 	  .state('react', {
 	  	url: '/react',
 	  	templateUrl: '../tpl/react.html',

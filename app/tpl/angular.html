@@ -1,6 +1,6 @@
 <aside class="sideBar">
 	<div class="sideBar-left">
-		<a ui-sref="angular.navigation" ui-sref-active="active">
+		<a ui-sref="angular.nav" ui-sref-active="active">
 			<i class="glyphicon glyphicon-list icon-item">
 				<div class="triangle-left"></div>
 			</i>
@@ -14,10 +14,9 @@
 		</a>
 	</div>			
 	<div class="sideBar-right">
-		<nav ui-view>
-		</nav>
+		<div ui-view></div>
 	</div>
 </aside>
 <main class="content">
-	<div ui-view="item"></div>
+	<iframe src="{{currentDemo.url}}"></iframe>
 </main>

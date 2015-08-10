@@ -3,7 +3,8 @@
 	<input id="search-input" type="text" placeholder="Search" ng-model="searchTxt">
 </div>
 <div>	
-	<a class="item-link" ng-repeat="item in items | filter:searchTxt">
+	<a class="item-link" ng-repeat="item in items | filter:searchTxt" ui-sref-active="active" ng-click="changeDemo(item)">
+		<i class="glyphicon glyphicon-menu-right item-link-icon"></i>
 		{{item.name}}
 	</a>
 </div>
